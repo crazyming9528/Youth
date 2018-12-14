@@ -1,0 +1,52 @@
+
+.main-wrapper{
+
+
+  .nav-wrapper{
+    background-color: white;
+    box-shadow: rgb(203, 203, 203) 0px 0px 4px;
+    margin-bottom: 10px;
+    align-items: center;
+    height: 60px;
+    .logo{
+
+      //background-color: aquamarine;
+    }
+    .nav-list{
+      display: flex;
+
+      .li{
+        padding: 0 15px;
+        list-style: none;
+        display: inline-block;
+
+      }
+    }
+
+
+    .user-info{
+      //background-color: cadetblue;
+    }
+  }
+
+  .slider{
+    width: 960px;
+    height: 600px;
+    margin: 0 auto;
+  }
+
+  .login-guide{
+    position: fixed;
+    width: 100%;
+    z-index: 1008611;
+    bottom: 0;
+    left: 0;
+  }
+
+
+
+}
+
+
+
+
