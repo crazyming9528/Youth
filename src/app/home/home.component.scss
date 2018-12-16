@@ -1,0 +1,38 @@
+.container{
+
+  .slider{
+    margin: 15px 0;
+  }
+
+  @media screen and (min-width: 768px) {
+    .slider{
+
+      height: 400px;
+      & /deep/ img{
+        height: 400px!important;
+      }
+
+    }
+
+  }
+
+
+  .news-list-wrapper{
+    .news-list{
+      background-color: white;
+      padding: 5px;
+    }
+
+
+  }
+
+  .right-side-wrapper{
+    .right-side{
+      background-color: white;
+      padding: 5px;
+    }
+
+  }
+
+
+}

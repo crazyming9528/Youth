@@ -1,15 +1,15 @@
 
-.main-wrapper{
-
 
   .nav-wrapper{
     background-color: white;
     box-shadow: rgb(203, 203, 203) 0px 0px 4px;
-    margin-bottom: 10px;
     align-items: center;
-    height: 60px;
+    min-height: 60px;
     .logo{
-
+      cursor: pointer;
+      h1{
+        font-size: 26px;
+      }
       //background-color: aquamarine;
     }
     .nav-list{
@@ -21,8 +21,11 @@
         list-style: none;
         cursor: pointer;
         flex-shrink: 0;
+        height: 60px;
+        line-height: 60px;
+        transition: all 0.3s;
         &:hover{
-          background-color: aquamarine;
+          background-color: #e9f4ff;
         }
 
       }
@@ -39,7 +42,7 @@
       align-items: center;
       .avatar{
         border-radius: 50%;
-        height: 50%;
+       height: 30px;
         width: 30px;
         img{
           border-radius: 50%;
@@ -67,13 +70,12 @@
       background-color: aquamarine;
       right: 10px;
       bottom: 200px;
+      z-index: 10086;
 
     }
   }
 
-  .slider{
 
-  }
 
   .login-guide{
     position: fixed;
@@ -85,7 +87,7 @@
 
 
 
-}
+
 
 
 
