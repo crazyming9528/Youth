@@ -1,35 +1,40 @@
 <div class="container-fluid main-wrapper">
 
   <nav class="row nav-wrapper">
-    <div class="logo col-md-2">Youth</div>
-    <div   class="col-md-8 hidden-xs" >
+    <div class="logo col-md-2 col-6 ">Bye Youth !</div>
+    <div   class="col-md-8 d-none d-md-flex"  >
       <div class="nav-list">
         <div class="li">首页</div>
-        <div class="li">首页</div>
-        <div class="li">首页</div>
-        <div class="li">首页</div>
-        <div class="li">首页</div>
-        <div class="li">首页</div>
-        <div class="li">首页</div>
-        <div class="li">首页</div>
-        <div class="li">首页</div>
+        <div class="li">新闻</div>
+        <div class="li">功能1</div>
+        <div class="li">功能2</div>
+        <div class="li">功能3</div>
+        <div class="li">功能4</div>
+        <div class="li">功能5</div>
+        <div class="li">功能6</div>
+
+
       </div>
     </div>
-    <div class="user-info col-md-2 ">
-      crayzming
-      <button class="btn btn-primary">logout</button>
-
+    <div class="user-info col-md-2 col-6">
+      <div class="avatar"><img src="../assets/img/avatar.jpg" alt=""></div>
+      <div class=" username">crayzming</div>
     </div>
+    <div class="d-md-none mobile-menu">MENU</div>
   </nav>
 
-  <div class="slider row">
-    <app-carousel-config></app-carousel-config>
+  <div class="row">
+    <div class="col-12 slider">
+      <app-carousel-config></app-carousel-config>
+    </div>
+  </div>
+
+  <div class="login-guide">
+    <app-login-guide></app-login-guide>
   </div>
 
 
 </div>
 
 
-<div class="login-guide">
-  <app-login-guide></app-login-guide>
-</div>
+
