@@ -1,12 +1,24 @@
-<div class="container">
+
+<div class="container-fluid">
 
   <div class="row">
     <div class="col-12  slider">
+
       <app-carousel-config></app-carousel-config>
 
     </div>
 
   </div>
+</div>
+<div class="container">
+
+  <!--<div class="row">-->
+    <!--<div class="col-12  slider">-->
+      <!--<app-carousel-config></app-carousel-config>-->
+
+    <!--</div>-->
+
+  <!--</div>-->
 
   <div class="row">
 
@@ -14,11 +26,10 @@
       <div class="news-list">
 
         <ul>
-          <li>123</li>
-          <li>123</li>
-          <li>123</li>
-          <li>123</li>
-          <li>123</li>
+          <li *ngFor="let item of newsList">
+            <h5>{{item.title}}</h5>
+            <span>{{item.authorName}}</span>
+          </li>
         </ul>
 
 

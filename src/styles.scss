@@ -2,6 +2,10 @@
 @import 'variables';
 @import '../node_modules/bootstrap/scss/bootstrap';
 
+$fa-font-path: "../node_modules/font-awesome/fonts";
+@import'~font-awesome/scss/font-awesome.scss';
+
+
 body{
   background-color: #f2f2f2;
 }

@@ -17,18 +17,25 @@
     </div>
     <div class="user-info col-md-2 col-6">
       <div class="avatar"><img src="../assets/img/avatar.jpg" alt=""></div>
-      <div class=" username">crazyming
-        <ul class="user-dropdown"><li>个人中心</li><li>退出登录</li></ul>
+      <div class=" username" (click)="toggleUserDropdown()">crazyming
+        <ul class="user-dropdown" *ngIf="userDropdown"><li>个人中心</li><li>退出登录</li></ul>
       </div>
 
     </div>
-    <div class="d-md-none mobile-menu">MENU</div>
+
   </nav>
 
 </div>
-
 <router-outlet>
 </router-outlet>
+
+<div class="d-md-none mobile-menu">
+<div class="menu-primary"><i class="fa fa-home fa-2x"></i><div>首页</div></div>
+  <div class="menu-primary"> <i class="fa fa-newspaper-o fa-2x"></i><div>新闻</div></div>
+  <div class="menu-primary"><i class="fa fa-mortar-board fa-2x"></i><div>Hi! Youth</div></div>
+  <div class="menu-primary"> <i class="fa fa-user fa-2x"></i><div>个人中心</div></div>
+</div>
+
 
   <!--<div class="container" >-->
     <!--<router-outlet>-->
@@ -46,9 +53,9 @@
 <!--</div>-->
 
 
-<div class="login-guide">
-  <app-login-guide></app-login-guide>
-</div>
+<!--<div class="login-guide">-->
+  <!--<app-login-guide></app-login-guide>-->
+<!--</div>-->
 
 
 
