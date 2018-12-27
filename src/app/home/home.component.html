@@ -3,9 +3,7 @@
 
   <div class="row">
     <div class="col-12  slider">
-
       <app-carousel-config></app-carousel-config>
-
     </div>
 
   </div>
@@ -27,8 +25,15 @@
 
         <ul>
           <li *ngFor="let item of newsList">
-            <h5>{{item.title}}</h5>
-            <span>{{item.authorName}}</span>
+            <!--h4用于手机显示-->
+            <h5 class="d-md-none mobile-h5">{{item.title}}</h5>
+            <h5 class="d-none d-md-block">{{item.title}}</h5>
+            <div class="info"><span>{{item.authorName}}</span><span>{{item.createTime | date : 'yyyy-MM-dd hh:mm '}}</span><span> <i class="fa fa-eye"></i>{{item.viewCount}}</span><span><i class="fa fa-heart"></i>{{item.likeCount}}</span></div>
+            <div class="article-img"><img [src]="item.firstImg" alt=""></div>
+            <div class="summary-wrapper">
+              <p class="summary mobile-summary d-md-none">{{item.digest.substring(0,45)}}...</p>
+              <p class="summary d-none d-md-block">{{item.digest.substring(0,120)}}...</p>
+            </div>
           </li>
         </ul>
 
@@ -45,3 +50,4 @@
 
 
 </div>
+

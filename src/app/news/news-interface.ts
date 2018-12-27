@@ -5,5 +5,9 @@ export interface News {
 
 export interface Res {
  code: number;
-  map: any;
+  map: {
+    pageInfo: {
+      list: any[]
+    }
+  };
 }

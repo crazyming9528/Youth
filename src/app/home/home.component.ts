@@ -21,9 +21,9 @@ getNews() {
    const  ob = this.newsService.getAllNews();
    ob.subscribe((res: Res) => {
      if (res) {
-       const {code, map } = res;
-       this.newsList = map.pageInfo.list;
-       console.log(code);
+       const {code, map: {pageInfo: { list}} } = res;
+       this.newsList = list;
+       console.log(list);
      }
 
    });
