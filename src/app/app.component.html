@@ -1,29 +1,33 @@
-<div class="container-fluid ">
+<div class="container-fluid top">
 
-  <nav class="row nav-wrapper">
-    <div class="logo col-md-2 col-6 ">
-      <h1>Youth !</h1></div>
-    <div   class="col-md-8 d-none d-md-flex"  >
-      <div class="nav-list">
-        <div class="li" routerLink="/index" routerLinkActive="nav-active">首页</div>
-        <div class="li">新闻</div>
-        <div class="li">功能1</div>
-        <div class="li">功能2</div>
-        <div class="li">功能3</div>
-        <div class="li">功能4</div>
-        <div class="li">功能5</div>
-        <div class="li">功能6</div>
-      </div>
-    </div>
-    <div class="user-info col-md-2 col-6">
-      <div class="avatar"><img src="../assets/img/avatar.jpg" alt=""></div>
-      <div class=" username" (click)="toggleUserDropdown()">crazyming
-        <ul class="user-dropdown" *ngIf="userDropdown"><li>个人中心</li><li>退出登录</li></ul>
-      </div>
 
-    </div>
+   <div class="container">
+     <nav class="row nav-wrapper">
+     <div class="logo col-md-2 col-6 ">
+       <h1><b>Y</b>outh !</h1></div>
+     <div  class="col-md-8 d-none d-md-flex"  >
+       <div class="nav-list">
+         <div class="li" routerLinkActive="nav-active"><a routerLink="/index" >首页</a></div>
+         <div class="li" routerLinkActive="nav-active"><a href="javascript:void(0)">新闻</a></div>
+         <div class="li" routerLinkActive="nav-active"><a href="javascript:void(0)">功能1</a></div>
+         <div class="li" routerLinkActive="nav-active"><a href="javascript:void(0)">功能2</a></div>
+         <div class="li" routerLinkActive="nav-active"><a href="javascript:void(0)">功能3</a></div>
+         <div class="li" routerLinkActive="nav-active"><a href="javascript:void(0)">功能4</a></div>
+         <div class="li" routerLinkActive="nav-active"><a href="javascript:void(0)">功能5</a></div>
+         <div class="li" routerLinkActive="nav-active"><a href="javascript:void(0)">功能6</a></div>
+       </div>
+     </div>
+     <div class="user-info col-md-2 col-6">
+       <div class="avatar"><img src="../assets/img/avatar.jpg" alt=""></div>
+       <div class=" username" (click)="toggleUserDropdown()">crazyming
+         <ul class="user-dropdown" *ngIf="userDropdown"><li>个人中心</li><li>退出登录</li></ul>
+       </div>
 
-  </nav>
+     </div>
+     </nav>
+   </div>
+
+
 
 </div>
 <router-outlet>

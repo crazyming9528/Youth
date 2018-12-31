@@ -1,1 +1,8 @@
-$baseColor:#b8dcff;
+$baseColor:#00aa98;
+
+
+body[data-theme="1"]{
+
+  $baseColor:white;
+
+}

@@ -1,33 +1,34 @@
 
+@import '../../variables';
 .container-fluid {
 
-  .slider {
-    margin-bottom: 15px;
-    width: 100%;
-    padding: 0;
 
-  }
-
-  @media screen and (min-width: 768px) {
-    .slider {
-
-      height: 750px;
-
-      & /deep/ img {
-        height: 750px !important;
-      }
-
-    }
-
-  }
 
 
 }
 
 .container {
-
-
+  margin-top: 15px;
   .news-list-wrapper {
+    .slider {
+      margin-bottom: 15px;
+      width: 100%;
+      padding: 0;
+
+    }
+
+    @media screen and (min-width: 768px) {
+      .slider {
+
+        height: 460px;
+
+        & /deep/ img {
+          height: 460px !important;
+        }
+
+      }
+
+    }
     .news-list {
       ul {
         margin: 0;
@@ -42,9 +43,11 @@
           border-radius: 1px;
           display: flex;
           flex-wrap: wrap;
-          transition: all 0.5s;
+          border-bottom: transparent 3px solid ;
+          transition: all 1.5s;
           &:hover {
             background-color: #fbfbfb;
+            border-bottom: $baseColor 3px solid ;
             box-shadow: rgba(203, 203, 203, .5) 0 1px 2px 0;
           }
 

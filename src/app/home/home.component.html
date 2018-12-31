@@ -3,7 +3,7 @@
 
   <div class="row">
     <div class="col-12  slider">
-      <app-carousel-config></app-carousel-config>
+
     </div>
 
   </div>
@@ -21,6 +21,14 @@
   <div class="row">
 
     <div class="col-12 col-md-9 news-list-wrapper">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="slider">
+            <app-carousel-config></app-carousel-config>
+          </div>
+
+        </div>
+      </div>
       <div class="news-list">
 
         <ul>
@@ -32,7 +40,7 @@
             <div class="article-img"><img [src]="item.firstImg" alt=""></div>
             <div class="summary-wrapper">
               <p class="summary mobile-summary d-md-none">{{item.digest.substring(0,45)}}...</p>
-              <p class="summary d-none d-md-block">{{item.digest.substring(0,120)}}...</p>
+              <p class="summary d-none d-md-block">{{item.digest.substring(0,150)}}...</p>
             </div>
           </li>
         </ul>
@@ -43,7 +51,7 @@
     </div>
 
     <div class="d-none d-md-block col-md-3 right-side-wrapper">
-      <div class="right-side">12312313dsads a dsa dsa dsa d as d2</div>
+      <div class="right-side">日历 签到  当前 签到人数  手机二维码广告  快捷导航  热度排行</div>
     </div>
 
   </div>
