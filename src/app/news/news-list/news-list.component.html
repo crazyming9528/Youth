@@ -1,0 +1,33 @@
+
+<!--type=1 带封面 摘要 的 新闻列表-->
+<div class="news-list-1" *ngIf="type==1">
+
+  <ul>
+    <li *ngFor="let item of newsList">
+      <!--h4用于手机显示-->
+      <h5 class="d-md-none mobile-h5">{{item.title}}</h5>
+      <h5 class="d-none d-md-block">{{item.title}}</h5>
+      <div class="info"><span>{{item.authorName}}</span><span>{{item.createTime | date : 'yyyy-MM-dd hh:mm '}}</span><span> <i class="fa fa-eye"></i>{{item.viewCount}}</span><span><i class="fa fa-heart"></i>{{item.likeCount}}</span></div>
+      <div class="article-img"><img [src]="item.firstImg" alt=""></div>
+      <div class="summary-wrapper">
+        <p class="summary mobile-summary d-md-none">{{item.digest.substring(0,45)}}...</p>
+        <p class="summary d-none d-md-block">{{item.digest.substring(0,150)}}...</p>
+      </div>
+    </li>
+  </ul>
+
+
+</div>
+
+<!--type=2 仅包含标题 作者(可自定义)  发布时间（可自定义） 的 新闻列表-->
+<div class="news-list-2" *ngIf="type==2">
+
+  <ul>
+    <li *ngFor="let item of newsList">
+      <h5 class="d-md-block">{{item.title}}</h5>
+      <div class="info"><span *ngIf="author">{{item.authorName}}</span><span *ngIf="createTime">{{item.createTime | date : 'yyyy-MM-dd hh:mm '}}</span></div>
+    </li>
+  </ul>
+
+
+</div>
