@@ -1,6 +1,11 @@
 @import '../variables';
+
+//[data-style-theme="1"]{无效
+//  background-color: #005ea0;
+//}
 .top{
-  background-color: #505050;
+  //background-color: #505050;
+  //@include bg_color($baseColor);
   box-shadow: rgb(203, 203, 203) 0px 0px 4px;
   color: white;
   border-top: 3px solid #00aa98;
@@ -120,6 +125,18 @@
       }
 
 
+    }
+  }
+  .change-theme{
+    position: absolute;
+    right: 0;
+    top:0;
+    button{
+      background-color: transparent;
+      border:none;
+      color: white;
+      margin: 5px;
+      cursor: pointer;
     }
   }
 }
