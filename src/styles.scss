@@ -11,6 +11,11 @@ body{
   background-color: #f2f2f2;
 }
 
+.top{
+  @include bg_color($baseColor-gray)
+}
+
+
 @media (min-width: 1200px) {
   .container{
     max-width: 1300px;

@@ -29,29 +29,83 @@
 
         </div>
       </div>
-      <div class="news-list">
-
-        <ul>
-          <li *ngFor="let item of newsList">
-            <!--h4用于手机显示-->
-            <h5 class="d-md-none mobile-h5">{{item.title}}</h5>
-            <h5 class="d-none d-md-block">{{item.title}}</h5>
-            <div class="info"><span>{{item.authorName}}</span><span>{{item.createTime | date : 'yyyy-MM-dd hh:mm '}}</span><span> <i class="fa fa-eye"></i>{{item.viewCount}}</span><span><i class="fa fa-heart"></i>{{item.likeCount}}</span></div>
-            <div class="article-img"><img [src]="item.firstImg" alt=""></div>
-            <div class="summary-wrapper">
-              <p class="summary mobile-summary d-md-none">{{item.digest.substring(0,45)}}...</p>
-              <p class="summary d-none d-md-block">{{item.digest.substring(0,150)}}...</p>
-            </div>
-          </li>
-        </ul>
-
-
+      <div class="row">
+        <div class="col-md-12">
+          <div class="title">
+            <h4><i class="fa fa-star"></i>推荐阅读</h4>
+            <div class="line"></div>
+          </div>
+          <app-news-list [newsList]="newsList" [type]="1" ></app-news-list>
+        </div>
       </div>
+
 
     </div>
 
     <div class="d-none d-md-block col-md-3 right-side-wrapper">
-      <div class="right-side">日历 签到  当前 签到人数  手机二维码广告  快捷导航  热度排行</div>
+      <div class="right-side user-info">
+        <div class="user">
+          <div class="avatar"><img src="../../assets/img/avatar.jpg" alt=""></div>
+          <div class="user-mini"><b>Crazyming</b>
+            <div class="link"><a href="#">消息通知</a><a  href="#">个人资料</a><a  href="#">退出登录</a></div>
+            <!--<div class="link"><a>登录</a></div>-->
+          </div>
+        </div>
+        <div class="hello"><p>{{hello}}</p>
+          <div class="link"><a href="#">点击签到</a><a  href="#">今日已签到20人！</a></div>
+        </div>
+
+      </div>
+      <!--<div class="right-side">日历 签到  当前 签到人数  手机二维码广告  快捷导航  热度排行</div>-->
+      <div class="right-side announcement">
+        <div class="title">
+          <h4><i class="fa fa-bullhorn"></i>信息公告</h4>
+          <div class="line"></div>
+        </div>
+        <div class="content-wrapper">
+          <app-news-list [newsList]="newsList" [type]="2" [author]=false [createTime]=true></app-news-list>
+        </div>
+      </div>
+
+      <div class="right-side">
+        <div class="title">
+          <h4><i class="fa fa-street-view"></i>失物招领</h4>
+          <div class="line"></div>
+        </div>
+        <div class="content-wrapper">
+          滚动失物招领
+        </div>
+      </div>
+
+      <div class="right-side">
+        <div class="title">
+          <h4><i class="fa  fa-line-chart"></i>热门新闻</h4>
+          <div class="line"></div>
+        </div>
+        <div class="content-wrapper">
+          热门新闻列表
+        </div>
+      </div>
+
+      <div class="right-side">
+        <div class="title">
+          <h4><i class="fa fa-location-arrow"></i>快捷导航</h4>
+          <div class="line"></div>
+        </div>
+        <div class="content-wrapper">
+         功能快捷导航
+        </div>
+      </div>
+
+      <div class="right-side">
+        <div class="title">
+          <h4><i class="fa fa-mobile"></i>手机版二维码广告</h4>
+          <div class="line"></div>
+        </div>
+        <div class="content-wrapper">
+          放置 手机版  微信二维码  等  广告
+        </div>
+      </div>
     </div>
 
   </div>

@@ -1,8 +1,27 @@
-$baseColor:#00aa98;
+$baseColor: #00aa98;
 
+$baseColor-green: #00aa98;
 
-body[data-theme="1"]{
+$baseColor-blue: #005ea0;
 
-  $baseColor:white;
+$baseColor-gray: #505050;
+$baseColor-black: black;
+$baseColor-red:#e83548;
+
+@mixin bg_color($color) {
+
+  background-color: $color;
+
+  [data-style-theme="1"] & {
+    background-color: $baseColor-gray;
+  }
+
+  [data-style-theme="2"] & {
+
+    background-color: $baseColor-red;
+
+  }
 
 }
+
+

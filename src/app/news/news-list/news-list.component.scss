@@ -1,0 +1,137 @@
+@import '../../../variables';
+.news-list-1 {
+  ul {
+    margin: 0;
+    padding: 0;
+
+    li {
+      list-style: none;
+      background-color: white;
+      padding: 8px;
+      cursor: pointer;
+      margin-bottom: 12px;
+      border-radius: 1px;
+      display: flex;
+      flex-wrap: wrap;
+      border-bottom: transparent 3px solid ;
+      transition: all 1.5s;
+      &:hover {
+        background-color: #fbfbfb;
+        border-bottom: $baseColor 3px solid ;
+        box-shadow: rgba(203, 203, 203, .5) 0 1px 2px 0;
+      }
+
+      h5 {
+        width: 100%;
+        font-size: 24px;
+        margin: 0;
+        //overflow: hidden;
+        //text-overflow: ellipsis;
+        //white-space: nowrap;
+
+      }
+
+      .mobile-h5 {
+        font-size: 18px;
+      }
+
+      .info {
+        width: 100%;
+        text-align: right;
+        margin-bottom: 5px;
+        & > span {
+          font-size: 12px;
+          color: #b3b3b3;
+          margin-right: 15px;
+
+          .fa {
+            margin-right: 5px;
+          }
+        }
+      }
+
+      .article-img {
+        width: 35%;
+        padding-top: 20%;
+        position: relative;
+
+        img {
+          width: 100%;
+          position: absolute;
+          height: 100%;
+          top: 0;
+          left: 0;
+        }
+      }
+
+      .summary-wrapper {
+        flex: 1;
+        padding: 15px;
+        padding-top: 0;
+        height: 100%;
+
+        .summary {
+          color: gray;
+          margin-top: 15px;
+          height: 100%;
+          overflow: hidden;
+          font-size: 16px;
+        }
+
+        .mobile-summary {
+          font-size: 12px;
+        }
+      }
+
+    }
+  }
+}
+.news-list-2 {
+  ul {
+    margin: 0;
+    padding: 0;
+
+    li {
+      list-style: none;
+      background-color: white;
+      padding: 8px;
+      cursor: pointer;
+      border-radius: 1px;
+      display: flex;
+      flex-wrap: wrap;
+      border-left: transparent 3px solid ;
+      transition: all 1.5s;
+      &:hover {
+        background-color: #fbfbfb;
+        border-left: $baseColor 3px solid ;
+        //box-shadow: rgba(203, 203, 203, .5) 0 1px 2px 0;
+      }
+
+      h5 {
+        width: 100%;
+        font-size: 16px;
+        margin: 0;
+        //overflow: hidden;
+        //text-overflow: ellipsis;
+        //white-space: nowrap;
+
+      }
+
+
+      .info {
+        text-align: right;
+        & > span {
+          font-size: 12px;
+          color: #b3b3b3;
+          margin-right: 15px;
+
+          .fa {
+            margin-right: 5px;
+          }
+        }
+      }
+
+
+    }
+  }
+}

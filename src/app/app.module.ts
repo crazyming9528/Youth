@@ -9,6 +9,7 @@ import { TestComponent } from './test/test.component';
 import { UserModule} from './user/user.module';
 import { HomeComponent } from './home/home.component';
 import {HttpClientModule} from '@angular/common/http';
+import {NewsModule} from './news/news.module';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import {HttpClientModule} from '@angular/common/http';
     AppRoutingModule,
     UserModule,
     HttpClientModule,
+    NewsModule,
     BsDropdownModule.forRoot(),
     CarouselModule.forRoot()
   ],
