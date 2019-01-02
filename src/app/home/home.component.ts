@@ -12,10 +12,12 @@ export class HomeComponent implements OnInit {
   data: any;
   hello: string;
   newsList: News[];
+  announcementList: News[];
   constructor(private newsService: NewsService) { }
 
   ngOnInit() {
     this.getNews();
+    this.getAnnouncement();
     this.sayHello();
   }
   sayHello(): void {
@@ -38,6 +40,17 @@ getNews() {
      }
 
    });
+}
+
+getAnnouncement() {
+  const  ob = this.newsService.getAnnouncement();
+  ob.subscribe((res: Res) => {
+    if (res) {
+      const {code, map: {pageInfo: { list}} } = res;
+      this.announcementList = list;
+    }
+
+  });
 }
 
 }
