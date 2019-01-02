@@ -24,7 +24,8 @@ export interface Res {
  code: number;
   map: {
     pageInfo: {
-      list: any[]
+      list: any[];
     }
+    turn: any[];
   };
 }

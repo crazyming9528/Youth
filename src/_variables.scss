@@ -6,20 +6,15 @@ $baseColor-blue: #005ea0;
 
 $baseColor-gray: #505050;
 $baseColor-black: black;
-$baseColor-red:#e83548;
+$baseColor-red: #e83548;
 
 @mixin bg_color($color) {
-
   background-color: $color;
-
   [data-style-theme="1"] & {
     background-color: $baseColor-gray;
   }
-
   [data-style-theme="2"] & {
-
     background-color: $baseColor-red;
-
   }
 
 }
