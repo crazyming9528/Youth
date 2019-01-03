@@ -15,7 +15,7 @@ import {NewsModule} from './news/news.module';
   declarations: [
     AppComponent,
     TestComponent,
-    HomeComponent
+    HomeComponent,
   ],
   imports: [
     BrowserModule,

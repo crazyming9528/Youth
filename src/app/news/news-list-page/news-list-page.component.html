@@ -1,0 +1,41 @@
+<div class="container">
+
+
+
+  <div class="row">
+
+    <div class="d-none d-md-block col-md-3 left-side-wrapper">
+
+
+      <div class="left-side announcement">
+        <div class="title">
+          <h4><i class="fa fa-bullhorn"></i>信息公告</h4>
+          <div class="line"></div>
+        </div>
+        <div class="content-wrapper">
+          <app-news-list [newsList]="announcementList" [type]="2" [author] = false [createTime] = true></app-news-list>
+          <div class="more">more<i class="fa  fa-angle-double-right"></i></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-9 news-list-wrapper">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="title">
+            <h4><i class="fa fa-star"></i>推荐阅读</h4>
+            <div class="line"></div>
+          </div>
+          <!--<app-news-list [newsList]="newsList" [type]="1" ></app-news-list>-->
+        </div>
+      </div>
+
+
+    </div>
+
+
+
+  </div>
+
+
+</div>

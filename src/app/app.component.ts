@@ -20,10 +20,10 @@ export class AppComponent {
   changTheme(): void {
     console.log(`切换主题`);
     const body = document.getElementsByTagName('body')[0];
-    if (body.getAttribute(`data-style-theme`) === '1') {
-      body.setAttribute('data-style-theme', '2');
+    if (body.getAttribute(`data-theme-style`) === 'aa') {
+      body.setAttribute('data-theme-style', 'bb');
     } else {
-      body.setAttribute('data-style-theme', '1');
+      body.setAttribute('data-theme-style', 'aa');
     }
   }
 }
