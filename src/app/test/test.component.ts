@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import { CarouselConfig } from 'ngx-bootstrap/carousel';
 @Component({
   selector: 'app-carousel-config',
@@ -8,10 +8,12 @@ import { CarouselConfig } from 'ngx-bootstrap/carousel';
   ]
 })
 export class TestComponent implements OnInit {
-
+  myInterval = 5000;
+  @Input()sliderList: any;
   constructor() { }
 
   ngOnInit() {
+    console.log(this.sliderList);
   }
 
 }

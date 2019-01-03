@@ -16,7 +16,7 @@
       border-bottom: transparent 3px solid ;
       transition: all 1.5s;
       &:hover {
-        background-color: #fbfbfb;
+        background-color: #f9f9f9;
         border-bottom: $baseColor 3px solid ;
         box-shadow: rgba(203, 203, 203, .5) 0 1px 2px 0;
       }
@@ -102,7 +102,7 @@
       border-left: transparent 3px solid ;
       transition: all 1.5s;
       &:hover {
-        background-color: #fbfbfb;
+        background-color: #f9f9f9;
         border-left: $baseColor 3px solid ;
         //box-shadow: rgba(203, 203, 203, .5) 0 1px 2px 0;
       }

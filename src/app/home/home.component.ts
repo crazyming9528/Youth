@@ -13,11 +13,13 @@ export class HomeComponent implements OnInit {
   hello: string;
   newsList: News[];
   announcementList: News[];
+  sliderList: any[];
   constructor(private newsService: NewsService) { }
 
   ngOnInit() {
     this.getNews();
     this.getAnnouncement();
+    this.getSlider();
     this.sayHello();
   }
   sayHello(): void {
@@ -27,7 +29,8 @@ export class HomeComponent implements OnInit {
     else if (hour < 12) {this.hello = `上午好，想好今天吃什么了吗？`; }
     else if (hour < 14) {this.hello = `中午好，睡个午觉休息下吧！`; }
     else if (hour < 19) {this.hello = `下午好呀，每天都要保持活力哦！`;}
-    else if (hour < 24) {this.hello = `晚上好，累了一天早点休息哦！`; }
+    else if (hour < 22) {this.hello = `晚上好，累了一天早点休息哦！`; }
+    else if (hour < 24) {this.hello = `已经很晚了，记得早点休息哦！`; }
   }
 
 getNews() {
@@ -49,8 +52,18 @@ getAnnouncement() {
       const {code, map: {pageInfo: { list}} } = res;
       this.announcementList = list;
     }
-
   });
+}
+
+getSlider() {
+    const  ob = this.newsService.getSlider();
+    ob.subscribe((res: Res) => {
+      console.log(res);
+      if (res) {
+        const {code, map: { turn }} = res;
+        this.sliderList = turn;
+      }
+    });
 }
 
 }

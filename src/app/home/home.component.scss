@@ -26,6 +26,13 @@
           height: 460px !important;
         }
 
+        & /deep/ .carousel-caption {
+         background-color: #0d0d0d;
+          width: 100%;
+          opacity: 0.5;
+          left: 0;
+          bottom: 0;
+        }
       }
 
     }
