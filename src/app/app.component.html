@@ -1,41 +1,46 @@
-<div class="container-fluid top">
+<div class="container-fluid">
 
+<div class="top">
+  <div class="container">
+    <nav class="row nav-wrapper">
+      <div class="logo col-md-2 col-6 ">
+        <h1><b>Y</b>outh !</h1></div>
+      <div  class="col-md-8 d-none d-md-flex"  >
+        <div class="nav-list">
+          <div class="li" routerLinkActive="nav-active"><a routerLink="/index" >首页</a></div>
+          <div class="li" routerLinkActive="nav-active"><a routerLink="/news" >新闻</a></div>
+          <div class="li" routerLinkActive="nav-active"><a href="javascript:void(0)">功能1</a></div>
+          <div class="li" routerLinkActive="nav-active"><a href="javascript:void(0)">功能2</a></div>
+          <div class="li" routerLinkActive="nav-active"><a href="javascript:void(0)">功能3</a></div>
+          <div class="li" routerLinkActive="nav-active"><a href="javascript:void(0)">功能4</a></div>
+          <div class="li" routerLinkActive="nav-active"><a href="javascript:void(0)">功能5</a></div>
+          <div class="li" routerLinkActive="nav-active"><a href="javascript:void(0)">功能6</a></div>
+        </div>
+      </div>
+      <div class="user-info col-md-2 col-6">
+        <div class="avatar"><img src="../assets/img/avatar.jpg" alt=""></div>
+        <div class=" username" (click)="toggleUserDropdown()">crazyming
+          <ul class="user-dropdown" *ngIf="userDropdown"><li>个人中心</li><li>退出登录</li></ul>
+        </div>
 
-   <div class="container">
-     <nav class="row nav-wrapper">
-     <div class="logo col-md-2 col-6 ">
-       <h1><b>Y</b>outh !</h1></div>
-     <div  class="col-md-8 d-none d-md-flex"  >
-       <div class="nav-list">
-         <div class="li" routerLinkActive="nav-active"><a routerLink="/index" >首页</a></div>
-         <div class="li" routerLinkActive="nav-active"><a routerLink="/news" >新闻</a></div>
-         <div class="li" routerLinkActive="nav-active"><a href="javascript:void(0)">功能1</a></div>
-         <div class="li" routerLinkActive="nav-active"><a href="javascript:void(0)">功能2</a></div>
-         <div class="li" routerLinkActive="nav-active"><a href="javascript:void(0)">功能3</a></div>
-         <div class="li" routerLinkActive="nav-active"><a href="javascript:void(0)">功能4</a></div>
-         <div class="li" routerLinkActive="nav-active"><a href="javascript:void(0)">功能5</a></div>
-         <div class="li" routerLinkActive="nav-active"><a href="javascript:void(0)">功能6</a></div>
-       </div>
-     </div>
-     <div class="user-info col-md-2 col-6">
-       <div class="avatar"><img src="../assets/img/avatar.jpg" alt=""></div>
-       <div class=" username" (click)="toggleUserDropdown()">crazyming
-         <ul class="user-dropdown" *ngIf="userDropdown"><li>个人中心</li><li>退出登录</li></ul>
-       </div>
-
-     </div>
-     </nav>
-   </div>
-
-
-<div class="change-theme"><button (click)="changTheme()">切换主题</button></div>
+      </div>
+    </nav>
+  </div>
+  <div class="change-theme"><button (click)="changTheme()">切换主题</button></div>
 </div>
-<router-outlet>
-</router-outlet>
-<footer>
-  Super Song 版权所有
-</footer>
 
+
+<div class="main">
+
+  <router-outlet>
+  </router-outlet>
+  <footer>
+    Super Song 版权所有
+  </footer>
+
+</div>
+
+</div>
 <div class="d-md-none mobile-menu">
 <div class="menu-primary"><i class="fa fa-home fa-2x"></i><div>首页</div></div>
   <div class="menu-primary"> <i class="fa fa-newspaper-o fa-2x"></i><div>新闻</div></div>

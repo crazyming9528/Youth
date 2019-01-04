@@ -7,110 +7,136 @@
     </div>
 
   </div>
-</div>
-<div class="container">
 
-  <!--<div class="row">-->
+  <div class="container">
+
+    <!--<div class="row">-->
     <!--<div class="col-12  slider">-->
-      <!--<app-carousel-config></app-carousel-config>-->
+    <!--<app-carousel-config></app-carousel-config>-->
 
     <!--</div>-->
 
-  <!--</div>-->
+    <!--</div>-->
 
-  <div class="row">
+    <div class="row">
 
-    <div class="col-12 col-md-9 news-list-wrapper">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="slider">
-            <app-carousel-config [sliderList]="sliderList"></app-carousel-config>
+      <div class="col-12 col-md-9 news-list-wrapper">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="slider">
+              <app-carousel-config [sliderList]="sliderList"></app-carousel-config>
+            </div>
+
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="title">
+              <h4><i class="fa fa-star"></i>推荐阅读</h4>
+              <div class="line"></div>
+            </div>
+            <app-news-list [newsList]="newsList" [type]="1" ></app-news-list>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div class="d-none d-md-block col-md-3 right-side-wrapper">
+        <div class="right-side user-info">
+          <div class="user">
+            <div class="avatar"><img src="../../assets/img/avatar.jpg" alt=""></div>
+            <div class="user-mini"><b>crazyming</b>
+              <div class="link"><a href="#">消息通知</a><a  href="#">个人资料</a><a  href="#">退出登录</a></div>
+              <!--<div class="link"><a>登录</a></div>-->
+            </div>
+          </div>
+          <div class="hello"><p>{{hello}}</p>
+            <div class="link"><a href="#">点击签到</a><a  href="#">今日已签到20人！</a></div>
           </div>
 
         </div>
-      </div>
-      <div class="row">
-        <div class="col-md-12">
-          <div class="title">
-            <h4><i class="fa fa-star"></i>推荐阅读</h4>
-            <div class="line"></div>
-          </div>
-          <app-news-list [newsList]="newsList" [type]="1" ></app-news-list>
+        <div class="right-side">
+          <app-side-panel icon="fa fa-bullhorn"  panelTitle="信息公告" moreLink="/index">
+            <app-news-list [newsList]="announcementList" [type]="2" [author] = false [createTime] = true></app-news-list>
+          </app-side-panel>
         </div>
-      </div>
 
+        <!--<div class="right-side">日历 签到  当前 签到人数  手机二维码广告  快捷导航  热度排行</div>-->
+        <div class="right-side announcement">
+          <!--<div class="title">-->
+          <!--<h4><i class="fa fa-bullhorn"></i>信息公告</h4>-->
+          <!--<div class="line"></div>-->
+          <!--</div>-->
+          <!--<div class="content-wrapper">-->
+          <!--<app-news-list [newsList]="announcementList" [type]="2" [author] = false [createTime] = true></app-news-list>-->
+          <!--<div class="more">more<i class="fa  fa-angle-double-right"></i></div>-->
+          <!--</div>-->
+        </div>
+
+        <div class="right-side">
+          <app-side-panel icon="fa fa-street-view"  panelTitle="失物招领" moreLink="/index">
+            <app-news-list [newsList]="announcementList" [type]="2" [author] = false [createTime] = true></app-news-list>
+          </app-side-panel>
+        </div>
+
+        <!--<div class="right-side">-->
+        <!--<div class="title">-->
+        <!--<h4><i class="fa fa-street-view"></i>失物招领</h4>-->
+        <!--<div class="line"></div>-->
+        <!--</div>-->
+        <!--<div class="content-wrapper">-->
+        <!--滚动失物招领-->
+        <!--</div>-->
+        <!--</div>-->
+
+        <div class="right-side">
+          <app-side-panel icon="fa fa-line-chart"  panelTitle="热门新闻" moreLink="/index">
+            <app-news-list [newsList]="announcementList" [type]="2" [author] = false [createTime] = true></app-news-list>
+          </app-side-panel>
+        </div>
+        <!--<div class="right-side">-->
+        <!--<div class="title">-->
+        <!--<h4><i class="fa  fa-line-chart"></i>热门新闻</h4>-->
+        <!--<div class="line"></div>-->
+        <!--</div>-->
+        <!--<div class="content-wrapper">-->
+        <!--热门新闻列表-->
+        <!--</div>-->
+        <!--</div>-->
+
+        <div class="right-side">
+          <app-side-panel icon="fa fa-location-arrow"  panelTitle="快捷导航" moreLink="/index">
+            <app-news-list [newsList]="announcementList" [type]="2" [author] = false [createTime] = true></app-news-list>
+          </app-side-panel>
+        </div>
+
+        <!--<div class="right-side">-->
+        <!--<div class="title">-->
+        <!--<h4><i class="fa fa-location-arrow"></i>快捷导航</h4>-->
+        <!--<div class="line"></div>-->
+        <!--</div>-->
+        <!--<div class="content-wrapper">-->
+        <!--功能快捷导航-->
+        <!--</div>-->
+        <!--</div>-->
+
+        <div class="right-side">
+          <app-side-panel icon="fa fa-mobile"  panelTitle="手机版二维码广告" moreLink="/index">
+            <app-news-list [newsList]="announcementList" [type]="2" [author] = false [createTime] = true></app-news-list>
+          </app-side-panel>
+        </div>
+
+
+      </div>
 
     </div>
 
-    <div class="d-none d-md-block col-md-3 right-side-wrapper">
-      <div class="right-side user-info">
-        <div class="user">
-          <div class="avatar"><img src="../../assets/img/avatar.jpg" alt=""></div>
-          <div class="user-mini"><b>crazyming</b>
-            <div class="link"><a href="#">消息通知</a><a  href="#">个人资料</a><a  href="#">退出登录</a></div>
-            <!--<div class="link"><a>登录</a></div>-->
-          </div>
-        </div>
-        <div class="hello"><p>{{hello}}</p>
-          <div class="link"><a href="#">点击签到</a><a  href="#">今日已签到20人！</a></div>
-        </div>
-
-      </div>
-      <!--<div class="right-side">日历 签到  当前 签到人数  手机二维码广告  快捷导航  热度排行</div>-->
-      <div class="right-side announcement">
-        <div class="title">
-          <h4><i class="fa fa-bullhorn"></i>信息公告</h4>
-          <div class="line"></div>
-        </div>
-        <div class="content-wrapper">
-          <app-news-list [newsList]="announcementList" [type]="2" [author] = false [createTime] = true></app-news-list>
-          <div class="more">more<i class="fa  fa-angle-double-right"></i></div>
-        </div>
-      </div>
-
-      <div class="right-side">
-        <div class="title">
-          <h4><i class="fa fa-street-view"></i>失物招领</h4>
-          <div class="line"></div>
-        </div>
-        <div class="content-wrapper">
-          滚动失物招领
-        </div>
-      </div>
-
-      <div class="right-side">
-        <div class="title">
-          <h4><i class="fa  fa-line-chart"></i>热门新闻</h4>
-          <div class="line"></div>
-        </div>
-        <div class="content-wrapper">
-          热门新闻列表
-        </div>
-      </div>
-
-      <div class="right-side">
-        <div class="title">
-          <h4><i class="fa fa-location-arrow"></i>快捷导航</h4>
-          <div class="line"></div>
-        </div>
-        <div class="content-wrapper">
-         功能快捷导航
-        </div>
-      </div>
-
-      <div class="right-side">
-        <div class="title">
-          <h4><i class="fa fa-mobile"></i>手机版二维码广告</h4>
-          <div class="line"></div>
-        </div>
-        <div class="content-wrapper">
-          放置 手机版  微信二维码  等  广告
-        </div>
-      </div>
-    </div>
 
   </div>
 
 
+
 </div>
+
 

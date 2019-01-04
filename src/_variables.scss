@@ -9,32 +9,5 @@ $baseColor-black: black;
 $baseColor-red:#e83548;
 
 
-@mixin bg_color($color) {
-
-  background-color: $color;
-
-  :host-context([data-theme-style="aa"]) & {
-    background-color: $baseColor-gray;
-  }
-
-  :host-context([data-theme-style="bb"])  & {
-
-    background-color: $baseColor-red;
-
-  }
-
-}
-
-
-@mixin font_color($color) {
-
-  color: $color;
-  :host-context([data-theme-style="aa"]) & {
-    color: green;
-  }
-  :host-context([data-theme-style="bb"]) & {
-    color: red;
-  }
-}
 
 

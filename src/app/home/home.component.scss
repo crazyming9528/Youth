@@ -1,168 +1,129 @@
 
-@import '../../variables';
+@import '../../mixin';
 .container-fluid {
-
-
-
-
-}
-
-.container {
-  margin-top: 15px;
-  .news-list-wrapper {
-    .slider {
-      margin-bottom: 15px;
-      width: 100%;
-      padding: 0;
-
-    }
-
-    @media screen and (min-width: 768px) {
+  height: auto;
+  .container {
+    margin-top: 15px;
+    .news-list-wrapper {
       .slider {
+        margin-bottom: 15px;
+        width: 100%;
+        padding: 0;
 
-        height: 460px;
-
-        & /deep/ img {
-          height: 460px !important;
-        }
-
-        & /deep/ .carousel-caption {
-         background-color: #0d0d0d;
-          width: 100%;
-          opacity: 0.5;
-          left: 0;
-          bottom: 0;
-        }
       }
 
-    }
+      @media screen and (min-width: 768px) {
+        .slider {
 
-    .title{
-      display: flex;
-      align-items: center;
-      margin-bottom: 15px;
-      h4{
-        font-size: 13px;
-        color: #505050;
-        font-weight: bold;
-        padding-left: 5px;
-        margin: 0;
-        .fa{
-          color: $baseColor;
-          margin-right: 10px;
+          height: 460px;
+
+          & /deep/ img {
+            height: 460px !important;
+          }
+
+          & /deep/ .carousel-caption {
+            background-color: #0d0d0d;
+            width: 100%;
+            opacity: 0.5;
+            left: 0;
+            bottom: 0;
+          }
         }
-      }
-      .line{
-        background-color: #E5E5E5;
-        height: 1px;
-        flex: 1;
-        margin: 0 10px;
+
       }
 
-    }
-
-
-
-  }
-
-  .right-side-wrapper {
-    .right-side {
-      background-color: white;
-      padding: 5px;
-      margin-bottom: 15px;
-
-.title{
-  display: flex;
-  align-items: center;
-  h4{
-    font-size: 13px;
-    color: #505050;
-    font-weight: bold;
-    padding-left: 5px;
-    margin: 0;
-    .fa{
-      color: $baseColor;
-      margin-right: 10px;
-    }
-  }
-  .line{
-    background-color: #E5E5E5;
-    height: 1px;
-    flex: 1;
-    margin: 0 10px;
-  }
-
-}
-      .content-wrapper{
-        min-height: 300px;
-        padding: 15px 0;
-
-        .more{
-          cursor: pointer;
-          @include font_color($baseColor-blue);
-          width: 100%;
-          text-align: right;
-          padding: 0 15px;
-        }
-      }
-
-    }
-    .user-info{
-      .user{
+      .title{
         display: flex;
         align-items: center;
-        flex-wrap: wrap;
-        .avatar{
-          width: 60px;
-          height: 60px;
-          img{
-            width: 100%;
-            height: 100%;
-            border-radius: 50%;
+        margin-bottom: 15px;
+        h4{
+          font-size: 13px;
+          color: #505050;
+          font-weight: bold;
+          padding-left: 5px;
+          margin: 0;
+          .fa{
+            color: $baseColor;
+            margin-right: 10px;
           }
         }
-        .user-mini{
+        .line{
+          background-color: #E5E5E5;
+          height: 1px;
           flex: 1;
-          padding: 5px;
-          b{
-            display: block;
-            margin-bottom: 5px;
+          margin: 0 10px;
+        }
+
+      }
+
+
+
+    }
+
+    .right-side-wrapper {
+      .right-side {
+        margin-bottom: 15px;
+        background-color: white;
+      }
+      .user-info{
+        padding: 5px;
+        .user{
+          display: flex;
+          align-items: center;
+          flex-wrap: wrap;
+          .avatar{
+            width: 60px;
+            height: 60px;
+            img{
+              width: 100%;
+              height: 100%;
+              border-radius: 50%;
+            }
+          }
+          .user-mini{
+            flex: 1;
+            padding: 5px;
+            b{
+              display: block;
+              margin-bottom: 5px;
+            }
+            .link{
+              display: flex;
+              a{
+                display: block;
+                flex: 1;
+                text-align: center;
+                font-size: 14px;
+                //color: gray;
+                color: $baseColor;
+
+              }
+            }
+          }
+
+        }
+        .hello{
+          font-size: 14px;
+          color: gray;
+
+          p{
+            margin: 5px 0;
           }
           .link{
-            display: flex;
             a{
-              display: block;
-              flex: 1;
-              text-align: center;
-              font-size: 14px;
-              //color: gray;
               color: $baseColor;
-
+              margin-right: 15px;
             }
           }
         }
+      }
+      .announcement{
 
       }
-.hello{
-  font-size: 14px;
-  color: gray;
 
-  p{
-    margin: 5px 0;
-  }
-  .link{
-    a{
-      color: $baseColor;
-      margin-right: 15px;
     }
+
+
   }
 }
-    }
-    .announcement{
 
-    }
-
-  }
-
-
-}

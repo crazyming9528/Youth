@@ -31,3 +31,30 @@
 
 
 </div>
+
+
+
+<!--type=3 包含标题 作者(可自定义)  发布时间（可自定义） 摘要 封面 的 新闻列表-->
+<div class="news-list-3" *ngIf="type==3">
+
+  <ul>
+    <div *ngFor="let item of newsList">
+    <li >
+      <div class="article-img"><img [src]="item.firstImg" alt=""></div>
+      <div class="right">
+        <div class="info">
+          <span *ngIf="author">{{item.authorName}}</span>
+          <span *ngIf="createTime">{{item.createTime | date : 'yyyy-MM-dd hh:mm '}}</span>
+          <span> <i class="fa fa-eye"></i>{{item.viewCount}}</span>
+          <span class="to-right"><i class="fa fa-heart to-right"></i>{{item.likeCount}}</span>
+        </div>
+        <h5 class="">{{item.title}}</h5>
+        <div class="type"><span> #{{item.typeName}}#</span></div>
+      </div>
+    </li>
+      <hr>
+    </div>
+  </ul>
+
+
+</div>

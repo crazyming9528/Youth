@@ -16,4 +16,5 @@ export class NewsListComponent implements OnInit {
   ngOnInit() {
   }
 
+
 }

@@ -1,5 +1,10 @@
-@import '../variables';
+@import '../mixin';
 
+.container-fluid{
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
 
 .top{
   //background-color: #505050;
@@ -14,7 +19,7 @@
   .nav-wrapper{
 
     align-items: center;
-    min-height: 60px;
+    height: 60px;
     .logo{
       cursor: pointer;
       h1{
@@ -27,7 +32,8 @@
     }
     .nav-list{
       display: flex;
-      flex-wrap: wrap;
+      flex-wrap: nowrap;
+      overflow: hidden;
 
       .li{
         padding: 0 30px;
@@ -42,20 +48,7 @@
       height: 100%;
       display: block;
       cursor: pointer;
-      &:after{
-        content: "";
-        width:0;
-        height:3px;
-        background-color: #00aa98;
-        position:absolute;
-        left:50%;
-        bottom: 0;
-        transition: all 0.5s ;
-      }
-      &:hover:after{
-        left: 0;
-        width: 100%;
-      }
+@include line_animation(0.3s);
 
 
 
@@ -138,6 +131,12 @@
     }
   }
 }
+
+  .main{
+    width: 100%;
+    height:calc(100% - 60px);
+    overflow: auto;
+  }
   .mobile-menu{
 
   position: fixed;
@@ -193,5 +192,5 @@ footer {
 
 
 
-
+}
 

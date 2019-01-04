@@ -7,34 +7,35 @@
     <div class="d-none d-md-block col-md-3 left-side-wrapper">
 
 
-      <div class="left-side announcement">
-        <div class="title">
-          <h4><i class="fa fa-bullhorn"></i>信息公告</h4>
-          <div class="line"></div>
-        </div>
-        <div class="content-wrapper">
-          <app-news-list [newsList]="announcementList" [type]="2" [author] = false [createTime] = true></app-news-list>
-          <div class="more">more<i class="fa  fa-angle-double-right"></i></div>
-        </div>
+      <div class="left-side news-type">
+        <app-side-panel icon="fa fa-street-view"  panelTitle="新闻分类" >
+<ul>
+  <li (click)="getNewsByType('all')">最新资讯</li>
+  <li *ngFor="let  type of newsTypeList;let idx=index" (click)="getNewsByType(type.id)">{{type.typeName}}</li>
+</ul>
+        </app-side-panel>
+
+      </div>
+
+      <div class="left-side">
+        <app-side-panel icon="fa fa-street-view"  panelTitle="推荐阅读" >
+          <app-news-list [newsList]="newsList" [type]="2" ></app-news-list>
+        </app-side-panel>
+
       </div>
     </div>
-
     <div class="col-12 col-md-9 news-list-wrapper">
       <div class="row">
         <div class="col-md-12">
-          <div class="title">
-            <h4><i class="fa fa-star"></i>推荐阅读</h4>
-            <div class="line"></div>
-          </div>
-          <!--<app-news-list [newsList]="newsList" [type]="1" ></app-news-list>-->
+          <app-news-list [newsList]="newsList" [type]="3" ></app-news-list>
         </div>
       </div>
-
-
+      <div class="row">
+        <div class="col-md-12">
+          <pagination [totalItems]="totalItems" [(ngModel)]="currentPage"></pagination>
+        </div>
+      </div>
     </div>
-
-
-
   </div>
 
 

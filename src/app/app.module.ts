@@ -10,6 +10,7 @@ import { UserModule} from './user/user.module';
 import { HomeComponent } from './home/home.component';
 import {HttpClientModule} from '@angular/common/http';
 import {NewsModule} from './news/news.module';
+import {ShareModule} from './share/share.module';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import {NewsModule} from './news/news.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    ShareModule,
     UserModule,
     HttpClientModule,
     NewsModule,

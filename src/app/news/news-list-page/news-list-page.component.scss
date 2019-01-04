@@ -1,0 +1,41 @@
+@import "../../../mixin";
+.container {
+  margin-top: 15px;
+  .left-side-wrapper{
+    .left-side{
+      margin-bottom: 15px;
+      background-color: white;
+
+    }
+
+    .news-type{
+
+      ul{
+        @include ul-list;
+        li{
+         height: 60px;
+          line-height: 60px;
+          cursor: pointer;
+          background-color: $baseColor;
+          margin: 15px 0px;
+          color: white;padding-left: 25px;
+          &:hover{
+            background-color: darken($baseColor,5%) // 把颜色亮度降低3%;
+          }
+        }
+      }
+    }
+
+
+  }
+
+.news-list-wrapper{
+  @include mixin-box-shadow();
+background-color: white;
+  padding-top: 15px;
+  padding-bottom: 15px;
+
+
+}
+
+}

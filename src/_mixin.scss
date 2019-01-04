@@ -1,0 +1,115 @@
+@import "variables";
+
+
+//清除浮动
+@mixin clearfix() {
+  &:after {
+    content: "";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility:hidden;
+  }
+}
+
+
+//透明度
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  $opacity-ie: $opacity * 100;
+  filter: alpha(opacity=$opacity-ie); //IE8
+}
+
+
+@mixin ul-list(){
+  margin: 0;
+  padding: 0;
+  li{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+}
+
+
+@mixin bg_color($color) {
+
+  background-color: $color;
+
+  :host-context([data-theme-style="aa"]) & {
+    background-color: $baseColor-gray;
+  }
+
+  :host-context([data-theme-style="bb"])  & {
+
+    background-color: $baseColor-red;
+
+  }
+
+}
+
+@mixin line_animation($time){
+
+
+  cursor: pointer;
+  &:after{
+    content: "";
+    width:0;
+    height:3px;
+    background-color: $baseColor;
+    position:absolute;
+    left:50%;
+    bottom: 0;
+    transition: all $time ;
+  }
+  &:hover:after{
+    left: 0;
+    width: 100%;
+  }
+
+
+
+}
+
+@mixin line_animation2($time){
+
+
+  cursor: pointer;
+  &:after{
+    content: "";
+    width:3px;
+    height:0;
+    background-color: $baseColor;
+    position:absolute;
+    left:0;
+    top: 50%;
+    transition: all $time;
+  }
+  &:hover:after{
+    top: 0;
+    height: 100%;
+  }
+
+
+}
+
+
+
+
+@mixin font_color($color) {
+
+  :host-context([data-theme-style="aa"]) & {
+    color: $baseColor;
+  }
+  :host-context([data-theme-style="bb"]) & {
+    color: red;
+  }
+}
+
+
+@mixin mixin-box-shadow($color:#e9e9e9){
+
+  box-shadow: 0 0 15px 0 $color;
+
+}
+

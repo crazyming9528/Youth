@@ -17,4 +17,10 @@ export class NewsService {
   getSlider() {
     return this.http.get(`http://120.78.149.155:8040/NewsTurn/getAll`);
   }
+  getNewsType() {
+    return this.http.get(`http://120.78.149.155:8040/NewsType/getAll?pageNum=1&pageSize=100`);
+  }
+  getNewsByType(id) {
+    return this.http.get(`http://172.96.255.64:8040/news/getNewsByQuery?type=${id}&pageNum=1&pageSize=100`);
+  }
 }

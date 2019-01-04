@@ -18,6 +18,13 @@ export interface News {
   viewCount: number;
 }
 
+export interface NewsType {
+  createTime: string;
+  id: string;
+  remark: string;
+  typeName: string;
+}
+
 
 
 export interface Res {
