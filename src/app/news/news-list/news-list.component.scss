@@ -13,6 +13,7 @@
       border-bottom: transparent 3px solid ;
       transition: all 1.5s;
       position: relative;
+      cursor: pointer;
       &:hover {
         background-color: #f9f9f9;
         border-bottom: $baseColor 3px solid ;
@@ -91,19 +92,21 @@
 
     li {
 
-      background-color: white;
+      //background-color: white;
       padding: 8px;
       cursor: pointer;
       border-radius: 1px;
       display: flex;
       flex-wrap: wrap;
       border-left: 3px solid transparent;
+      border-right: 3px solid transparent;
       transition: all 1.5s;
       position: relative;
 
       &:hover {
         background-color: #f9f9f9;
         border-left: 3px solid $baseColor;
+        border-right: 3px solid $baseColor;
       }
 
       h5 {
@@ -141,7 +144,6 @@
     li {
       @include clearfix();
       overflow: hidden;
-      background-color: white;
       padding: 8px;
       cursor: pointer;
       border-radius: 1px;

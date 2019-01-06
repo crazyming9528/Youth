@@ -13,8 +13,8 @@
       ul{
         @include ul-list;
         li{
-         height: 60px;
-          line-height: 60px;
+         height: 50px;
+          line-height: 50px;
           cursor: pointer;
           background-color: $baseColor;
           margin: 15px 0px;
@@ -29,11 +29,19 @@
 
   }
 
+ .topList{
+    margin-bottom: 15px;
+   background-color: white;
+   padding: 0;
+
+  }
+
 .news-list-wrapper{
-  @include mixin-box-shadow();
+
 background-color: white;
   padding-top: 15px;
   padding-bottom: 15px;
+  padding: 0;
 
 
 }

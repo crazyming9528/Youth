@@ -13,6 +13,7 @@ export class NewsListPageComponent implements OnInit {
   currentPage = 4;
    newsTypeList: NewsType[];
    newsList: News[];
+   topList: News[];
   constructor(private newsService: NewsService) { }
 
   ngOnInit() {
@@ -53,7 +54,7 @@ export class NewsListPageComponent implements OnInit {
         }
 
       });
-      console.log("ok");
+      console.log('ok');
     }
 
   setPage(pageNo: number): void {

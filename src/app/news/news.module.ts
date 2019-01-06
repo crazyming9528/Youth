@@ -8,9 +8,10 @@ import { NewsListPageComponent } from './news-list-page/news-list-page.component
 import {ShareModule} from '../share/share.module';
 import { PaginationModule } from 'ngx-bootstrap';
 import {FormsModule} from '@angular/forms';
+import { ArticlePageComponent } from './article-page/article-page.component';
 
 @NgModule({
-  declarations: [NewsListComponent, NewsListPageComponent],
+  declarations: [NewsListComponent, NewsListPageComponent, ArticlePageComponent],
   imports: [
     CommonModule,
     HttpClientModule,
@@ -20,7 +21,7 @@ import {FormsModule} from '@angular/forms';
     // NewsRoutingModule
   ],
   exports: [
-    NewsListComponent,
+    NewsListComponent, ArticlePageComponent
   ],
   providers: [NewsService]
 })

@@ -8,7 +8,7 @@
 
 
       <div class="left-side news-type">
-        <app-side-panel icon="fa fa-street-view"  panelTitle="新闻分类" >
+        <app-side-panel icon="fa fa-folder-open-o"  panelTitle="新闻分类" >
 <ul>
   <li (click)="getNewsByType('all')">最新资讯</li>
   <li *ngFor="let  type of newsTypeList;let idx=index" (click)="getNewsByType(type.id)">{{type.typeName}}</li>
@@ -18,16 +18,35 @@
       </div>
 
       <div class="left-side">
-        <app-side-panel icon="fa fa-street-view"  panelTitle="推荐阅读" >
+        <app-side-panel icon="fa fa-line-chart"  panelTitle="热门新闻">
+          <app-news-list [newsList]="newsList" [type]="2" ></app-news-list>
+        </app-side-panel>
+
+      </div>
+      <div class="left-side">
+        <app-side-panel icon="fa fa-star"  panelTitle="推荐阅读">
           <app-news-list [newsList]="newsList" [type]="2" ></app-news-list>
         </app-side-panel>
 
       </div>
     </div>
-    <div class="col-12 col-md-9 news-list-wrapper">
+
+    <div class="col-12 col-md-9">
+
       <div class="row">
-        <div class="col-md-12">
-          <app-news-list [newsList]="newsList" [type]="3" ></app-news-list>
+        <div class="col-md-12 topList">
+          <app-side-panel  icon="fa fa-flag"  panelTitle="置顶新闻">
+            <app-news-list [newsList]="newsList" [type]="2" [author]=false [createTime]=false ></app-news-list>
+          </app-side-panel>
+
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12 news-list-wrapper">
+          <app-side-panel  icon="fa fa-flag"  panelTitle="新闻列表">
+            <app-news-list [newsList]="newsList" [type]="3" ></app-news-list>
+          </app-side-panel>
+
         </div>
       </div>
       <div class="row">

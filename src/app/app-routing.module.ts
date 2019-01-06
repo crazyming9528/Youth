@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import {HomeComponent} from './home/home.component';
 import {NewsListPageComponent} from './news/news-list-page/news-list-page.component';
+import {ArticlePageComponent} from './news/article-page/article-page.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/index', pathMatch: 'full' },
@@ -13,6 +14,10 @@ const routes: Routes = [
   {
     path: 'news',
     component: NewsListPageComponent
+  },
+  {
+    path: 'article',
+    component: ArticlePageComponent
   },
 ];
 
