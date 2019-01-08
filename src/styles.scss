@@ -26,3 +26,13 @@ body{
   background-color: $baseColor;
   color: white;
 }
+
+
+//文章包裹层
+.contentWrapper{
+  overflow: hidden;
+  *{
+    max-width: 100%;
+  }
+
+}

@@ -25,6 +25,6 @@ export class NewsService {
   }
   getNewsContent(id) {
 
-    return this.http.get(`http://120.78.149.155:8040/news/getNewsById?id=${id}`);
+    return this.http.get(`http://120.78.149.155:8040/news/getNewsById?newsId=${id}`);
   }
 }

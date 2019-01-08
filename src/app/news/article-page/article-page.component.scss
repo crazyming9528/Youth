@@ -1,0 +1,68 @@
+@import "../../../mixin";
+.container{
+
+  .newsWrapper{
+    margin-top: 36px;
+    background-color: white;
+    @include mixin-box-shadow();
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    h2{
+      font-size: 36px;
+    }
+    .info {
+     text-align: left;
+      width: 100%;
+      & > span {
+        font-size: 12px;
+        color: #a1a1a1;
+        &:not(:first-child){
+          margin-left: 25px;
+        }
+
+        .fa {
+          margin-right: 5px;
+        }
+      }
+    }
+    .summary{
+      margin-top: 15px;
+      margin-bottom: 15px;
+      color: #505050;
+      font-size: 14px;
+      text-indent: 2em;
+      background-color: #f8f8f8;
+     padding: 15px;
+
+
+    }
+
+    .likeWrapper{
+      .like,.dislike{
+        flex: 1;
+        font-size: 80px;
+       i{
+         transition: all 0.8s;
+         cursor: pointer;
+         &:hover{
+           font-size: 90px;
+         }
+       }
+      }
+      .like{
+        color:red;
+        text-align: right;
+        padding-right: 20px;
+
+      }
+      .dislike{
+        color:orange;
+        text-align: left;
+        padding-left: 20px;
+      }
+    }
+
+  }
+
+}

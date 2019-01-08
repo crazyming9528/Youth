@@ -33,6 +33,8 @@ export interface Res {
     pageInfo: {
       list: any[];
     }
+    news: any;
     turn: any[];
   };
+  message: string;
 }

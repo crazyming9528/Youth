@@ -1,15 +1,30 @@
 <div class="container">
 
 
-
   <div class="row">
 
-    <div class="d-none d-md-block col-md-3 left-side-wrapper">
-      22
-    </div>
+    <!--<div class="d-none d-md-block col-md-3 left-side-wrapper">-->
+    <!--22-->
+    <!--</div>-->
 
-    <div class="col-12 col-md-9">
-{{newsId}}
+    <!--<div class="col-12 col-md-9">-->
+    <div  class="col-12 col-md-12 newsWrapper">
+      <div class="row">
+        <div class="col-12"><h2>{{news?.title}}</h2></div>
+        <div class=" col-12 info"><span>{{news?.authorName}}</span><span>{{news?.createTime | date : 'yyyy-MM-dd hh:mm '}}</span><span> <i class="fa fa-eye"></i>{{news?.viewCount}}</span></div>
+        <div class="col-12"><p class="summary">{{news?.digest}}</p></div>
+      </div>
+      <div class="row">
+
+        <div class="col-12 contentWrapper" [innerHTML]="showHtml"></div>
+
+      </div>
+      <div class="row likeWrapper">
+        <div class="like "><i class="fa fa-heart"></i></div>
+        <div class="dislike"><i class="fa fa-thumbs-o-down"></i></div>
+      </div>
+      <div class="row">评论</div>
+      <div class="row">评论列表</div>
 
     </div>
   </div>
