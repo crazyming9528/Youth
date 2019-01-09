@@ -20,13 +20,31 @@
 
       </div>
       <div class="row likeWrapper">
-        <div class="like "><i class="fa fa-heart"></i></div>
-        <div class="dislike"><i class="fa fa-thumbs-o-down"></i></div>
+
+        <div class="col-12">
+          <div class="heart" (click)="likeFn()"  [ngClass]="{'heartAnimation':like}" id="like1" rel="like">
+          </div>
+          <span *ngIf="!like">如果喜欢这篇文章 可以给我你的小心心吗？</span>
+          <span *ngIf="like" style="color: #e2264d;font-weight: bold">Thanks!</span>
+        </div>
+
+        <!--<div class="dislike"><i class="fa fa-thumbs-o-down"></i></div>-->
       </div>
-      <div class="row">评论</div>
-      <div class="row">评论列表</div>
+
+      <div class="row commentWrapper">
+        <div class="col-12">
+          <textarea rows="3" placeholder="文明上网 文明发言" class="comment-input"></textarea>
+        </div>
+
+        <div class="col-12 submit-wrapper">
+        <button>发布</button>
+        </div>
+        <div class="col-12">评论列表</div>
+      </div>
 
     </div>
+
+
   </div>
 
 

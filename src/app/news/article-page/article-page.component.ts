@@ -15,8 +15,12 @@ export class ArticlePageComponent implements OnInit {
   from: string;
   news: News;
   showHtml: any;
-  constructor(private activatedRoute: ActivatedRoute, private newsService: NewsService, private el: ElementRef, private renderer2: Renderer2,  private sanitizer: DomSanitizer) {
-
+  like = false;
+  constructor (
+    private activatedRoute: ActivatedRoute,
+    private newsService: NewsService, private el: ElementRef,
+    private renderer2: Renderer2,  private sanitizer: DomSanitizer
+  ) {
     activatedRoute.queryParams.subscribe(queryParams => {
       this.newsId = queryParams.nid;
       this.from = queryParams.from;
@@ -38,8 +42,9 @@ getNewsById(id) {
   });
   console.log('ok');
 
-
-
+}
+likeFn() {
+    this.like = !this.like;
 }
 
 }
