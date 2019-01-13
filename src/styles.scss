@@ -38,3 +38,15 @@ body{
 }
 
 
+.btn-primary{
+  background-color: $baseColor!important;
+  border-color: $baseColor!important;
+}
+.btn-primary:not(:disabled):not(.disabled):active{
+  box-shadow: 0 0 0 0.2rem lighten($baseColor,5%)!important;
+}
+
+.btn-primary:not(:disabled):not(.disabled):focus{
+  box-shadow: 0 0 0 0.2rem lighten($baseColor,5%)!important;
+}
+

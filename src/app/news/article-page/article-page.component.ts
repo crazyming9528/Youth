@@ -16,6 +16,7 @@ export class ArticlePageComponent implements OnInit {
   news: News;
   showHtml: any;
   like = false;
+  commentContent: string;
   constructor (
     private activatedRoute: ActivatedRoute,
     private newsService: NewsService, private el: ElementRef,
@@ -28,6 +29,8 @@ export class ArticlePageComponent implements OnInit {
   }
   ngOnInit() {
     this.getNewsById(this.newsId);
+    this.addView();
+    this.getComment();
   }
 getNewsById(id) {
   const  ob = this.newsService.getNewsContent(id);
@@ -46,5 +49,38 @@ getNewsById(id) {
 likeFn() {
     this.like = !this.like;
 }
+
+addView() {
+  const  ob  = this.newsService.addView(this.newsId, `33ea7030-d38f-4d0b-8338-b2ba36f2d7ad`);
+  ob.subscribe((res: Res) => {
+    if (res) {
+      console.log(res);
+      const {code, map, message} = res;
+    }
+
+  });
+}
+
+addComment() {
+    const  ob  = this.newsService.addComment(this.newsId, `33ea7030-d38f-4d0b-8338-b2ba36f2d7ad`, `33ea7030-d38f-4d0b-8338-b2ba36f2d7ad`, this.commentContent);
+    ob.subscribe((res: Res) => {
+      if (res) {
+        console.log(res);
+        const {code, map, message} = res;
+      }
+
+    });
+  }
+
+  getComment() {
+    const  ob  = this.newsService.getComment(this.newsId);
+    ob.subscribe((res: Res) => {
+      if (res) {
+        console.log(res);
+        const {code, map, message} = res;
+      }
+
+    });
+  }
 
 }

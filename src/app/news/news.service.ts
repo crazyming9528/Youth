@@ -27,4 +27,22 @@ export class NewsService {
 
     return this.http.get(`http://120.78.149.155:8040/news/getNewsById?newsId=${id}`);
   }
+  addView(newsId, userId) {
+    return this.http.post(`http://120.78.149.155:8040/news/addNewsVisitor`, {
+      newsId,
+      userId
+    });
+  }
+  addComment(newsId, commentTo, toComment, content) {
+    return this.http.post(`http://120.78.149.155:8040/newsDiscuss/add`, {
+      newsId,
+      commentTo,
+      toComment,
+      content
+    });
+
+  }
+  getComment(newsId) {
+    return this.http.get(` http://120.78.149.155:8040/newsDiscuss/getNewsDiscussByNewsId?newsId=${newsId}`);
+  }
 }

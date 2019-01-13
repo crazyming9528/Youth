@@ -33,13 +33,29 @@
 
       <div class="row commentWrapper">
         <div class="col-12">
-          <textarea rows="3" placeholder="文明上网 文明发言" class="comment-input"></textarea>
+          <textarea rows="3" [(ngModel)]="commentContent" placeholder="文明上网 文明发言" class="comment-input"></textarea>
         </div>
 
         <div class="col-12 submit-wrapper">
-        <button>发布</button>
+        <button class="btn btn-primary" (click)="addComment()">发布</button>
         </div>
         <div class="col-12">评论列表</div>
+        <div class="col-12 comment-list">
+         <ul>
+           <li>
+             <div class="comment-list-top">
+               <div class="avatar"><img src="../../../assets/img/avatar.jpg" alt=""></div>
+               <!--<span>{{comment?.authorName}}</span><span>{{comment?.createTime | date : 'yyyy-MM-dd hh:mm '}}</span>-->
+               <div class="user-info"><span>小明同学</span><span>2018-01-01</span></div>
+             </div>
+<div class="comment-content">
+  最近一段时间，对于中国人来说可谓是一个难得的好日子，2019年新年伊始，中国航天事业又实现了一次全新的突破，玉兔二号成功登陆月球背面创造了人类历史的一个新的奇迹，回顾中国航天工业发展的历程可以说是让人感慨颇多，如今中国航天不断取得突破的时候，航天的科普之路到底又该怎么走呢？
+</div>
+
+
+           </li>
+         </ul>
+        </div>
       </div>
 
     </div>
