@@ -1,0 +1,17 @@
+.shadow{
+  background-color: rgba(13, 13, 13, 0.3);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  .popup-wrapper{
+    background-color: white;
+    position: absolute;
+    width: 600px;
+    height: 300px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+}

@@ -34,6 +34,7 @@ export interface Res {
       list: any[];
     }
     news: any;
+    list: any[];
     turn: any[];
   };
   message: string;

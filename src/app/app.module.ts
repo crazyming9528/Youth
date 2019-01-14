@@ -18,6 +18,7 @@ import {ShareModule} from './share/share.module';
     AppComponent,
     TestComponent,
     HomeComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -30,6 +31,6 @@ import {ShareModule} from './share/share.module';
     CarouselModule.forRoot()
   ],
   providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule { }

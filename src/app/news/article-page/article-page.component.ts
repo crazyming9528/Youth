@@ -4,11 +4,25 @@ import {News, Res} from '../news-interface';
 import {NewsService} from '../news.service';
 import { DomSanitizer } from '@angular/platform-browser';
 
+interface Comment {
+
+  commentTo: string;
+  commentToName: string;
+  content: string;
+  createTime: string;
+  id: string;
+  newsId: string;
+  toComment: string;
+  toCommentName: string;
+}
+
+
 @Component({
   selector: 'app-article-page',
   templateUrl: './article-page.component.html',
   styleUrls: ['./article-page.component.scss']
 })
+
 export class ArticlePageComponent implements OnInit {
 
   newsId: string;
@@ -17,6 +31,7 @@ export class ArticlePageComponent implements OnInit {
   showHtml: any;
   like = false;
   commentContent: string;
+  commentList: Comment[];
   constructor (
     private activatedRoute: ActivatedRoute,
     private newsService: NewsService, private el: ElementRef,
@@ -67,17 +82,23 @@ addComment() {
       if (res) {
         console.log(res);
         const {code, map, message} = res;
+        this.clearComment();
+        this.getComment();
       }
 
     });
-  }
 
+  }
+  clearComment() {
+    this.commentContent = ``;
+  }
   getComment() {
     const  ob  = this.newsService.getComment(this.newsId);
     ob.subscribe((res: Res) => {
       if (res) {
         console.log(res);
         const {code, map, message} = res;
+        this.commentList = map.list;
       }
 
     });
