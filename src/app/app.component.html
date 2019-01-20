@@ -4,17 +4,15 @@
   <div class="container">
     <nav class="row nav-wrapper">
       <div class="logo col-md-2 col-6 ">
-        <h1><b>Y</b>outh !</h1></div>
+        <h1><b>Y</b>outh ! <span style="font-size: 15px">校内网</span></h1></div>
       <div  class="col-md-8 d-none d-md-flex"  >
         <div class="nav-list">
           <div class="li" routerLinkActive="nav-active"><a routerLink="/index" >首页</a></div>
           <div class="li" routerLinkActive="nav-active"><a routerLink="/news" >新闻</a></div>
-          <div class="li" routerLinkActive="nav-active"><a href="javascript:void(0)">功能1</a></div>
-          <div class="li" routerLinkActive="nav-active"><a href="javascript:void(0)">功能2</a></div>
-          <div class="li" routerLinkActive="nav-active"><a href="javascript:void(0)">功能3</a></div>
+          <div class="li" routerLinkActive="nav-active"><a href="javascript:void(0)">失物招领</a></div>
+          <div class="li" routerLinkActive="nav-active"><a href="javascript:void(0)">校友拼车</a></div>
+          <div class="li" routerLinkActive="nav-active"><a href="javascript:void(0)">校园设施报修</a></div>
           <div class="li" routerLinkActive="nav-active"><a href="javascript:void(0)">功能4</a></div>
-          <div class="li" routerLinkActive="nav-active"><a href="javascript:void(0)">功能5</a></div>
-          <div class="li" routerLinkActive="nav-active"><a href="javascript:void(0)">功能6</a></div>
         </div>
       </div>
       <div class="user-info col-md-2 col-6">
@@ -34,7 +32,7 @@
 
   <router-outlet>
   </router-outlet>
-  <button (click)="createComponentFactory('hhe')">jia</button>
+  <button (click)="createComponentFactory('hhe')">动态创建组件 测试</button>
   <button (click)="destroyComponent()">destroy</button>
   <footer #alertContainer>
     Super Song 版权所有
