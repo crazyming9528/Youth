@@ -66,7 +66,7 @@ likeFn() {
 }
 
 addView() {
-  const  ob  = this.newsService.addView(this.newsId, `33ea7030-d38f-4d0b-8338-b2ba36f2d7ad`);
+  const  ob  = this.newsService.addView(this.newsId);
   ob.subscribe((res: Res) => {
     if (res) {
       console.log(res);

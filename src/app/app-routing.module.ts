@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import {HomeComponent} from './home/home.component';
 import {NewsListPageComponent} from './news/news-list-page/news-list-page.component';
 import {ArticlePageComponent} from './news/article-page/article-page.component';
+import {TableComponent} from './table/table.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/index', pathMatch: 'full' },
@@ -18,6 +19,10 @@ const routes: Routes = [
   {
     path: 'article',
     component: ArticlePageComponent
+  },
+  {
+    path: 'table',
+    component: TableComponent
   },
 ];
 

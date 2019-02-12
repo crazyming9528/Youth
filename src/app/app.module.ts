@@ -12,18 +12,22 @@ import { HomeComponent } from './home/home.component';
 import {HttpClientModule} from '@angular/common/http';
 import {NewsModule} from './news/news.module';
 import {ShareModule} from './share/share.module';
+import { TableComponent } from './table/table.component';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     TestComponent,
     HomeComponent,
+    TableComponent,
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ShareModule,
+    FormsModule,
     UserModule,
     HttpClientModule,
     NewsModule,

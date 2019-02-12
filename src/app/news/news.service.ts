@@ -1,12 +1,18 @@
 import { Injectable } from '@angular/core';
-import {HttpClient} from '@angular/common/http';
+import {HttpClient, HttpHeaders} from '@angular/common/http';
 import { News } from './news-interface';
+import { Base64 } from 'js-base64';
 @Injectable({
   providedIn: 'root'
 })
 export class NewsService {
   baseUrl = `http://120.78.149.155:8040`;
-  constructor(private http: HttpClient) { }
+
+  httpOptions = {};
+
+  constructor(private http: HttpClient) {
+   this.httpOptions = { headers: new HttpHeaders({ 'Authorization': Base64.decode(localStorage.getItem('login'))})};
+  }
   getAllNews() {
     return this.http.get(this.baseUrl + `/news/getAll?pageNum=1&pageSize=10`);
    // return this.http.get<News[]>(`http://120.78.149.155:8040/news/getAll?pageNum=1&pageSize=10`)
@@ -28,11 +34,10 @@ export class NewsService {
 
     return this.http.get(this.baseUrl + `/news/getNewsById?newsId=${id}`);
   }
-  addView(newsId, userId) {
+  addView(newsId) {
     return this.http.post(this.baseUrl + `/news/addNewsVisitor`, {
-      newsId,
-      userId
-    });
+      newsId
+    }, this.httpOptions);
   }
   addComment(newsId, commentTo, toComment, content) {
     return this.http.post(this.baseUrl + `/newsDiscuss/add`, {

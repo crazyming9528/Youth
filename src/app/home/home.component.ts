@@ -21,6 +21,7 @@ export class HomeComponent implements OnInit {
     this.getAnnouncement();
     this.getSlider();
     this.sayHello();
+
   }
   sayHello(): void {
     const now = new Date(), hour = now.getHours();
