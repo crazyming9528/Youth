@@ -33,6 +33,9 @@ export class AppComponent implements OnDestroy {
       body.setAttribute('data-theme-style', 'aa');
     }
   }
+  toAdmin(): void {
+    window.location.href = 'http://cuit.crazyming.cn/admin';
+  }
   createComponentFactory(type) {
     this.container.clear();
     const factory: ComponentFactory<PopupComponent> = this.resolver.resolveComponentFactory(PopupComponent);
