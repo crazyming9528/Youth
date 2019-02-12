@@ -1,0 +1,114 @@
+@import '../../mixin';
+.container-fluid {
+  background-image: url("../../assets/img/2.jpg");
+  background-size: cover;
+  height: 100%;
+
+  .main {
+    width: 1300px;
+    margin: 0 auto;
+    //background-color: #00aa98;
+    //background-color: #00aa98;
+    .iTraffic-table {
+      width: 100%;
+      border-collapse: collapse;
+      background-color: rgba(29, 43, 69, 0.4);
+      border: none;
+      box-shadow: 0 5px 5px -3px rgba(0, 0, 0, .2), 0 8px 10px 1px rgba(0, 0, 0, .14), 0 3px 14px 2px rgba(0, 0, 0, .12);
+
+      thead {
+        background-color: rgba(53, 71, 92, 0.4);
+
+        tr {
+          th {
+            color: white;
+            font-weight: bold;
+            text-align: center;
+            border: transparent;
+            padding-bottom: 10px;
+
+            &.index {
+              div {
+                width: 50px;
+              }
+            }
+
+            div {
+              padding: 2px;
+
+              input {
+                background: transparent;
+                border: none;
+                border-bottom: 1px solid rgba(225, 251, 254, 0.2);
+                color: white;
+                padding: 0 5px;
+                width: 100%;
+              }
+            }
+          }
+
+
+        }
+      }
+
+      tbody {
+        tr {
+          border-top: 1px solid rgba(225, 251, 254, 0.2);
+          transition: all 0.5s;
+
+          td {
+            color: white;
+            padding: 12px 0;
+            border: transparent;
+
+            div {
+              width: 100%;
+              text-align: center;
+              //min-height: 48px;
+              &.edit{
+                input{
+                  background: transparent;
+                  border: none;
+                  border-bottom: 1px solid rgba(225, 251, 254, 0.2);
+                  color: white;
+                  padding: 0 5px;
+                  width: 100%;
+                }
+              }
+            }
+
+            &.action {
+              div {
+                width: 150px;
+              }
+            }
+
+          }
+
+          &.active {
+            background-color: rgba(29, 43, 69, 0.8);
+          }
+
+          &:hover {
+            background-color: rgba(29, 43, 69, 0.6);
+          }
+        }
+      }
+
+      tfoot {
+        tr {
+          td {
+            color: white;
+            height: 56px;
+            border: transparent;
+            border-top: 1px solid rgba(225, 251, 254, 0.2);
+            background-color: rgba(29, 43, 69, 0.45);
+            padding: 15px;
+          }
+        }
+      }
+
+    }
+
+  }
+}
