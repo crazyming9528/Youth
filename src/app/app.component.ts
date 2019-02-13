@@ -34,7 +34,7 @@ export class AppComponent implements OnDestroy {
     }
   }
   toAdmin(): void {
-    window.location.href = 'http://cuit.crazyming.cn/admin';
+    window.location.href = 'http://cuit.crazyming.cn/admin/#/login';
   }
   createComponentFactory(type) {
     this.container.clear();
