@@ -50,3 +50,13 @@ body{
   box-shadow: 0 0 0 0.2rem lighten($baseColor,5%)!important;
 }
 
+.page-item.active .page-link{
+  background-color: $baseColor!important;
+  border-color:$baseColor!important;
+  color: white!important;
+
+}
+
+.page-link{
+  color: $baseColor!important;
+}
