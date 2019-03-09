@@ -50,8 +50,13 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-md-12">
-          <pagination [totalItems]="totalItems" [(ngModel)]="currentPage"></pagination>
+        <div class="col-md-12" style="padding-top: 15px">
+          <!--<select [(ngModel)]="pageInfo_pageSize" name="s111" >-->
+            <!--<option value="5">5</option>-->
+            <!--<option value="12">12</option>-->
+          <!--</select>-->
+          <!--{{pageInfo_currentPage}}-->
+          <pagination [rotate] = true [maxSize]= 10  (pageChanged)="pageChanged($event)" [totalItems]="pageInfo_total" [(ngModel)]="pageInfo_currentPage" previousText="&lsaquo;" nextText="&rsaquo;" firstText="&laquo;" lastText="&raquo;"></pagination>
         </div>
       </div>
     </div>

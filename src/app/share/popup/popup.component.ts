@@ -11,7 +11,10 @@ export class PopupComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-  }
+    setTimeout(() => {
+      this.closePopup();
+    }, 8000);
+    }
   closePopup() {
 this.close.emit('close');
   }

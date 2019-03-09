@@ -32,6 +32,9 @@ export interface Res {
   map: {
     pageInfo: {
       list: any[];
+      pageSize: number;
+      total: number;
+      pageNum: number;
     }
     news: any;
     list: any[];

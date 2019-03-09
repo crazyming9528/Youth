@@ -4,6 +4,7 @@ import {HomeComponent} from './home/home.component';
 import {NewsListPageComponent} from './news/news-list-page/news-list-page.component';
 import {ArticlePageComponent} from './news/article-page/article-page.component';
 import {TableComponent} from './table/table.component';
+import {RepairComponent} from './repair/repair.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/index', pathMatch: 'full' },
@@ -15,6 +16,10 @@ const routes: Routes = [
   {
     path: 'news',
     component: NewsListPageComponent
+  },
+  {
+    path: 'repair',
+    component: RepairComponent
   },
   {
     path: 'article',

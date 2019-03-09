@@ -9,16 +9,23 @@ import {News, NewsType, Res} from '../news-interface';
 })
 export class NewsListPageComponent implements OnInit {
 
-  totalItems = 64;
-  currentPage = 4;
    newsTypeList: NewsType[];
    newsList: News[];
    topList: News[];
+   pageInfo_total: number;
+   pageInfo_currentPage: number;
+   pageInfo_pageSize: number;
   constructor(private newsService: NewsService) { }
 
   ngOnInit() {
+    this.initPage();
     this.getNewsType();
     this.getNews();
+  }
+
+  initPage(currentPage = 2, pageSize = 10) {
+    this.pageInfo_currentPage = currentPage;
+    this.pageInfo_pageSize = pageSize;
   }
 
 
@@ -34,12 +41,16 @@ export class NewsListPageComponent implements OnInit {
     });
   }
   getNews() {
-      const  ob = this.newsService.getAllNews()
+      const  ob = this.newsService.getAllNews(this.pageInfo_currentPage, this.pageInfo_pageSize)
       ob.subscribe((res: Res) => {
         if (res) {
-          const {code, map: {pageInfo: { list}} } = res;
+          const {code, map: {pageInfo: { list, pageSize, total, pageNum}} } = res;
           this.newsList = list;
+          console.log(total);
+          this.pageInfo_currentPage = pageNum;
+          this.pageInfo_total = total;
           console.log(list);
+
         }
 
       });
@@ -57,8 +68,10 @@ export class NewsListPageComponent implements OnInit {
       console.log('ok');
     }
 
-  setPage(pageNo: number): void {
-    this.currentPage = pageNo;
+  pageChanged (e) {
+    setTimeout(() => {
+      this.getNews();
+    }, 0);
   }
 
 }

@@ -1,4 +1,13 @@
-import {Component, ComponentFactory, ComponentFactoryResolver, ComponentRef, OnDestroy, ViewChild, ViewContainerRef} from '@angular/core';
+import {
+  Component,
+  ComponentFactory,
+  ComponentFactoryResolver,
+  ComponentRef,
+  OnDestroy,
+  OnInit,
+  ViewChild,
+  ViewContainerRef
+} from '@angular/core';
 import { ElementRef} from '@angular/core';
 import {PopupComponent} from './share/popup/popup.component';
 // import {AlertComponent} from 'ngx-bootstrap';
@@ -8,12 +17,17 @@ import {PopupComponent} from './share/popup/popup.component';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnDestroy {
+export class AppComponent implements OnDestroy, OnInit {
   title = 'youth';
   userDropdown = false;
   @ViewChild('alertContainer', { read: ViewContainerRef }) container: ViewContainerRef;
   componentRef: ComponentRef<PopupComponent>;
   constructor(private el: ElementRef, private resolver: ComponentFactoryResolver) {
+  }
+  ngOnInit() {
+    // setTimeout(() => {
+    //   this.createComponentFactory('login to admin');
+    // }, 5000);
   }
 
   ngOnDestroy() {
@@ -51,6 +65,7 @@ export class AppComponent implements OnDestroy {
   }
 
   destroyComponent() {
+
     this.componentRef.destroy();
   }
 }

@@ -13,8 +13,8 @@ export class NewsService {
   constructor(private http: HttpClient) {
    this.httpOptions = { headers: new HttpHeaders({ 'Authorization': Base64.decode(localStorage.getItem('login'))})};
   }
-  getAllNews() {
-    return this.http.get(this.baseUrl + `/news/getAll?pageNum=1&pageSize=10`);
+  getAllNews(currentPage, pageSize) {
+    return this.http.get(this.baseUrl + `/news/getAll?pageNum=${currentPage}&pageSize=${pageSize}`);
    // return this.http.get<News[]>(`http://120.78.149.155:8040/news/getAll?pageNum=1&pageSize=10`)
   }
   getAnnouncement() {

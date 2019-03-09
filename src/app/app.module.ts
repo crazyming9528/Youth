@@ -14,6 +14,9 @@ import {NewsModule} from './news/news.module';
 import {ShareModule} from './share/share.module';
 import { TableComponent } from './table/table.component';
 import {FormsModule} from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { RepairComponent } from './repair/repair.component';
+
 
 @NgModule({
   declarations: [
@@ -21,6 +24,8 @@ import {FormsModule} from '@angular/forms';
     TestComponent,
     HomeComponent,
     TableComponent,
+    RepairComponent,
+
 
   ],
   imports: [
@@ -31,6 +36,7 @@ import {FormsModule} from '@angular/forms';
     UserModule,
     HttpClientModule,
     NewsModule,
+    BrowserAnimationsModule,
     BsDropdownModule.forRoot(),
     CarouselModule.forRoot()
   ],

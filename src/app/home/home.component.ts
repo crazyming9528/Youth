@@ -2,13 +2,20 @@ import { Component, OnInit } from '@angular/core';
 import {NewsService} from '../news/news.service';
 import {Res} from '../news/news-interface';
 import {News} from '../news/news-interface';
+import {trigger, state, style, animate, transition} from '@angular/animations';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  styleUrls: ['./home.component.scss'],
+  animations: [ trigger('signal', [
+    state('go', style({ 'background-color': 'green'})),
+    state('stop', style({ 'background-color': 'red'})),
+    transition('* => *', animate('.5s 1s cubic-bezier(0.2, 0.8, 0.3, 1.8)'))
+  ])]
 })
 export class HomeComponent implements OnInit {
+  signal: string;
   data: any;
   hello: string;
   newsList: News[];
@@ -35,7 +42,7 @@ export class HomeComponent implements OnInit {
   }
 
 getNews() {
-   const  ob = this.newsService.getAllNews();
+   const  ob = this.newsService.getAllNews(1, 15);
    ob.subscribe((res: Res) => {
      if (res) {
        const {code, map: {pageInfo: { list}} } = res;
@@ -66,5 +73,13 @@ getSlider() {
       }
     });
 }
+
+toGreen() {
+    this.signal = 'go';
+}
+
+toRed() {
+  this.signal = 'stop';
+  }
 
 }
